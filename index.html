@@ -9,27 +9,26 @@
 <style>
 :root{--wine:#9C1C2E;--teal:#0D7377;--text:#444}
 *{box-sizing:border-box}body{margin:0;background:#fff;color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-.wrapper{width:min(100%,1500px);margin:auto;padding:20px 16px 28px}
-.header{display:flex;align-items:center;gap:14px;margin-bottom:16px}
-.node{flex:0 0 auto;background:var(--wine);color:#fff;border-radius:999px;padding:8px 18px;font-weight:800;font-size:16px}
-.title{color:var(--wine);font-size:clamp(16px,2vw,28px);font-weight:850}
+.wrapper{width:min(100%,1500px);margin:auto;padding:24px 22px 34px}
+.header{display:flex;align-items:center;gap:18px;margin-bottom:20px}
+.node{flex:0 0 auto;background:var(--wine);color:#fff;border-radius:999px;padding:10px 22px;font-weight:800;font-size:20px}
+.title{color:var(--wine);font-size:clamp(20px,2.4vw,32px);font-weight:850}
 .header-line{height:2px;background:var(--wine);opacity:.8;flex:1}
-.intro{max-width:1050px;margin:0 auto 16px;text-align:center;line-height:1.55;font-size:clamp(14px,1.5vw,17px)}
-.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:start}
-.card{position:relative;overflow:hidden;background:#fff;border:1px solid #e6e1e1;border-radius:14px;box-shadow:0 5px 14px rgba(0,0,0,.07);cursor:pointer;outline:none;transition:transform .24s ease,box-shadow .24s ease;min-width:0}
+.intro{max-width:1050px;margin:0 auto 22px;text-align:center;line-height:1.6;font-size:clamp(15px,1.7vw,18px)}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.card{position:relative;overflow:hidden;background:#fff;border:1px solid #e6e1e1;border-radius:22px;box-shadow:0 7px 18px rgba(0,0,0,.08);cursor:pointer;outline:none;transition:transform .24s ease,box-shadow .24s ease}
 .card img{display:block;width:100%;height:auto}
-.card:hover,.card:focus-visible{transform:scale(1.06);box-shadow:0 14px 28px rgba(0,0,0,.18);z-index:3}
-.zoom-hint{position:absolute;right:6px;bottom:6px;background:rgba(255,255,255,.92);color:var(--wine);border-radius:999px;padding:3px 7px;font-size:10px;font-weight:800;opacity:0;transition:opacity .2s ease}
+.card:hover,.card:focus-visible{transform:scale(1.045);box-shadow:0 16px 34px rgba(0,0,0,.18);z-index:3}
+.zoom-hint{position:absolute;right:10px;bottom:10px;background:rgba(255,255,255,.92);color:var(--wine);border-radius:999px;padding:5px 9px;font-size:11px;font-weight:800;opacity:0;transition:opacity .2s ease}
 .card:hover .zoom-hint,.card:focus-visible .zoom-hint{opacity:1}
-.note{margin:16px auto 0;width:fit-content;max-width:100%;background:#E6F4F4;border-left:4px solid var(--teal);padding:8px 12px;border-radius:10px;font-size:13px}
+.note{margin:20px auto 0;width:fit-content;max-width:100%;background:#E6F4F4;border-left:4px solid var(--teal);padding:10px 14px;border-radius:10px;font-size:14px}
 .modal{position:fixed;inset:0;display:none;place-items:center;padding:24px;background:rgba(30,30,30,.72);z-index:1000}
 .modal.open{display:grid}.modal-panel{position:relative;width:min(94vw,1100px);max-height:92vh;padding:12px;background:#fff;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.3)}
 .modal-panel img{display:block;max-width:100%;max-height:86vh;width:auto;height:auto;margin:auto;border-radius:12px}
 .close{position:absolute;top:-14px;right:-14px;width:44px;height:44px;border:0;border-radius:50%;background:var(--wine);color:#fff;font-size:25px;cursor:pointer}
-/* Mantener 5 en línea el mayor tiempo posible */
-@media(max-width:900px){.grid{gap:8px}.zoom-hint{display:none}}
-@media(max-width:640px){.wrapper{padding:14px 10px 22px}.header{flex-wrap:wrap;gap:8px}.title{width:100%}.header-line{display:none}.grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.card{border-radius:10px}}
-@media(max-width:420px){.grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}.intro{text-align:left;font-size:13px}.node{font-size:13px;padding:6px 12px}}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:720px){.wrapper{padding:18px 12px 28px}.header{flex-wrap:wrap;gap:10px}.title{width:100%}.header-line{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.intro{text-align:left}}
 @media(prefers-reduced-motion:reduce){.card,.zoom-hint{transition:none}.card:hover,.card:focus-visible{transform:none}}
 </style>
 <!-- =============== FIN ESTILOS =============== -->
